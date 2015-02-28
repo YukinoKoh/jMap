@@ -43,6 +43,11 @@ cherries['chinzanso'] = {
 	cSize: 2,
 	cname:'Chinzanso Hotel'
 };
+cherries['Hamarikyu'] = {
+	center: new google.maps.LatLng(35.662576,139.763251),
+	cSize: 3,
+	cname:'Hamarokyu'
+};
 cherries['Hanayashiki'] = {
 	center: new google.maps.LatLng(35.715282,139.794544),
 	cSize: 4,
