@@ -10,8 +10,9 @@
 var map;
 // geoLocation for maptOptions property, center
 var tokyo = new google.maps.LatLng(35.68537,139.76329);
-
 var roppongi = new google.maps.LatLng(35.661867,139.731351);
+var ginza = new google.maps.LatLng(35.673053,139.766489);
+var akasakaPalace = new google.maps.LatLng(35.679553,139.728413);
 
 // custom MapType for maptOptions property, mapTypeId
 var Custom_MapType_1 = 'style_night';
@@ -40,7 +41,7 @@ var option_night = [
 // map options 
 var mapOptions = {
 		// mapOptions
-		center:roppongi,
+		center:akasakaPalace,
 		zoom:13,   
 		mapTypeControlOptions: {
 	    	mapTypeIds: [google.maps.MapTypeId.ROADMAP, Custom_MapType_1]
@@ -62,5 +63,6 @@ function initialize() {
     draw();
     addWindow();
     drawGallery();
+    drawCherry();
 }
 google.maps.event.addDomListener(window, 'load', initialize);

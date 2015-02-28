@@ -17,7 +17,7 @@
     cityCircle = new google.maps.Circle(myCity);
 }
 /*
- * add infoBox to the circle
+ * add infoBubble 
  *
  * useful link:http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobubble/examples/example.html
  */
@@ -54,23 +54,21 @@ function addWindow(){
 }
 
 /*
- * infoBubble prototype
+ * infoBubble prototype for gallery
  *
  * when it is called by Circle class,
  * content and position are updated according to the circle properties 
  */
-var infoBubble = new InfoBubble({
+var infoBubbleGallery = new InfoBubble({
       map: map,
       content: '',
       shadowStyle: 1,
-      padding: 10,
-      maxWidth:300,
       backgroundColor: 'rgba(212,238,10,0.7)',
-      opacity: 0.8,
-      backgroundClassName: 'bubbleCss',
+      borderColor: '#2c2c2c',
+      maxWidth:300,
+      backgroundClassName: 'bubbleGallery',
       borderRadius: 5,
       borderWidth: 1,
-      borderColor: '#2c2c2c',
       arrowStyle: 0,
       arrowSize: 10,
       arrowPosition: 50,
@@ -100,14 +98,71 @@ function drawGallery(){
 
     // add event listener
     google.maps.event.addListener(galleryCircles, 'click', function() {
-      infoBubble.setContent(this.html);
-      infoBubble.setPosition(this.center);
-      infoBubble.open(map,this.galleryCircles);
+      infoBubbleGallery.setContent(this.html);
+      infoBubbleGallery.setPosition(this.center);
+      infoBubbleGallery.open(map,this.galleryCircles);
     });
     // close infoBubble
     google.maps.event.addListener(map, "click", function () { 
-      infoBubble.close();
+      infoBubbleGallery.close();
     });
-
   }
 }
+
+
+/*
+ * infoBubble prototype for cherry
+ *
+ * when it is called by Circle class,
+ * content and position are updated according to the circle properties 
+ */
+var infoBubbleCherry = new InfoBubble({
+      map: map,
+      content: 'Cherry',
+      shadowStyle: 1,
+      backgroundColor: '#fb038f',
+      borderColor: '#2c2c2c',
+      maxWidth:200,
+      maxHeight:200,
+      backgroundClassName: 'bubbleGallery',
+      borderRadius: 5,
+      borderWidth: 1,
+      arrowStyle: 0,
+      arrowSize: 10,
+      arrowPosition: 50,
+      disableAutoPan: true,
+      hideCloseButton: false
+    });
+
+function drawCherry(){
+  for (var cherry in cherries) { 
+    var cherryOptions = {
+      strokeColor:'#fb038f',
+      strokeOpacity:0.8,
+      strokeWeight: 1,
+      fillColor:'#fb038f',
+      fillOpacity:0.6,
+      map: map,
+      center: cherries[cherry].center,
+      radius: cherries[cherry].cSize * 30
+    };
+    // Add the circle for this city to the map.
+    var cherryCircles = new google.maps.Circle(cherryOptions);
+
+    // Prepare contents for infoBubble
+    cherryCircles.html = '<div><h5>Cherry Blossom!</h5><br>' + cherries[cherry].cname+ '</div>';
+
+    // add event listener
+    google.maps.event.addListener(cherryCircles, 'click', function() {
+      infoBubbleCherry.setContent(this.html);
+      infoBubbleCherry.setPosition(this.center);
+      infoBubbleCherry.open(map,this.cherryCircles);
+    });
+    // close infoBubble
+    google.maps.event.addListener(map, "click", function () { 
+      infoBubbleCherry.close();
+    });
+  }
+}
+
+
