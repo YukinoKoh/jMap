@@ -21,21 +21,21 @@ var option_night = [
     {
     	// set all features saturation of their default color
     	stylers: [
-    		{saturation: -82},
-    		{lightness: -83},
+    		{saturation: -88},
+    		{lightness: -88},
     		{hue:'#ff33ff'}
     	]
     },
     {
     	// set text color
 	    elementType: "labels.text.fill",
-	    stylers:[{color: '#3b3b3b'}]
+	    stylers:[{color: '#202020'}]
     },
     {
         // in addition, lower the lightness of water specifically
         featureType: "water",
         elementType: "geometry",
-        stylers: [{lightness: -20}]
+        stylers: [{lightness: -40}]
     }
 ];
 // map options 

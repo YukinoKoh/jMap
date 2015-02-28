@@ -50,7 +50,7 @@ cherries['Hamarikyu'] = {
 };
 cherries['Hanayashiki'] = {
 	center: new google.maps.LatLng(35.715282,139.794544),
-	cSize: 4,
+	cSize: 2,
 	cname:'Hanayashiki Amuseument Park'
 };
 cherries['Happoen'] = {
