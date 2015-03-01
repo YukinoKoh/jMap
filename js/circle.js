@@ -73,7 +73,7 @@ var infoBubbleGallery = new InfoBubble({
       arrowSize: 10,
       arrowPosition: 50,
       disableAutoPan: true,
-      hideCloseButton: true
+      hideCloseButton: false
     });
 
 function drawGallery(){
