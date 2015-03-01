@@ -43,6 +43,13 @@ galleries['Hermes Gallery'] = {
 	address:'5-4-1 Ginza, Chuo-ku, Tokyo',
 	url: 'http://goo.gl/iLFxCb'
 };
+galleries['Hiromi Yoshii'] = {
+	center: new google.maps.LatLng(35.6823,139.7939),
+	cSize: 2,
+	gName: 'Hiromi Yoshii',
+	address:'1-3-2 6F Kiyosumi Koto-ku Tokyo',
+	url: 'http://hiromiyoshii.com/?lang=en'
+};
 galleries['Gallery Koyanagi'] = {
 	center: new google.maps.LatLng(35.672089,139.770592),
 	cSize: 2,
@@ -51,7 +58,7 @@ galleries['Gallery Koyanagi'] = {
 	url: 'http://www.gallerykoyanagi.com/index.html'
 };
 galleries['Misako & Rosen'] = {
-	center: new google.maps.LatLng(35.660556,139.729167),
+	center: new google.maps.LatLng(35.689487,139.691706),
 	cSize: 2,
 	gName: 'Misako & Rosen',
 	address:'Kita-otsuka, 3-27-6, Tosahima-ku, Tokyo',
@@ -92,6 +99,13 @@ galleries['Nezu Museum'] = {
 	address:'6-5-1 Minami Aoyama, Minato-ku, Tokyo',
 	url: 'http://www.nezu-muse.or.jp/en/about/index.html'
 };
+galleries['Nichido Contemporary Art'] = {
+	center: new google.maps.LatLng(35.674558,139.774028),
+	cSize: 2,
+	gName: 'Nichido Contemporary Art',
+	address:'B1, 4-3-3 Hachobori, Chuo-ku, Tokyo',
+	url: 'http://www.nca-g.com/en/index.html'
+};
 galleries['Rat Hole Gallery'] = {
 	center: new google.maps.LatLng(35.663736,139.713414),
 	cSize: 2,
@@ -117,7 +131,7 @@ galleries['Taka Ishii Gallery Photo'] = {
 	center: new google.maps.LatLng(35.661359,139.736676),
 	cSize: 3,
 	gName: 'Taka Ishii Gallery Photography',
-	address:'5-17-1 2F Roppongi Minato-ku Tokyo',
+	address:'5-17-1 AXIS 2F Roppongi Minato-ku Tokyo',
 	url: 'http://www.takaishiigallery.com/en/'
 };
 galleries['Take Ninagawa Gallery'] = {
@@ -155,5 +169,14 @@ galleries['Watarium Museum'] = {
 	address:'3-7-6 Jingumae, Shibuya-ku, Tokyo',
 	url: 'http://www.watarium.co.jp/'
 };
+galleries['Yamamoto Gendai'] = {
+ 	center: new google.maps.LatLng(35.646830,139.729652),
+	cSize: 2,
+	gName: 'Yamamoto Gendai',
+	address:'3-1-15 3F Shirogame, Minato-ku, Tokyo',
+	url: 'http://yamamotogendai.org/english/index.html'
+};
+
+
 
 

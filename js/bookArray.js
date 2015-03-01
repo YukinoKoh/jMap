@@ -15,6 +15,28 @@ books['ABC roppongi'] = {
 	address:'6-1-20, Roppongi, Minto-ku, Tokyo',
 	url: 'http://www.aoyamabc.jp'
 };
+books['IMA CONCEPT STORE'] = {
+	center: new google.maps.LatLng(35.6620,139.738),
+	cSize: 2,
+	gName: 'IMA CONCEPT STORE',
+	address:'5-17-1 AXIS 3F Roppongi Minato-ku Tokyo',
+	url: 'https://www.facebook.com/imaconceptstore'
+};
+books['Monocle Chiyoda'] = {
+	center: new google.maps.LatLng(35.673072,139.760445),
+	cSize: 2,
+	gName: 'The Monocle Shop',
+	address:'Hankyu Men’s B1F, 2-5-1 Yurakucho Chiyoda-ku Tokyo',
+	url: 'http://monocle.com/about/contacts/tokyo-cafe/'
+};
+
+books['Monocle Yoyogi'] = {
+	center: new google.maps.LatLng(35.666118,139.691832),
+	cSize: 2,
+	gName: 'The Monocle Shop',
+	address:'Luna Rossa 1f, 1-19-2 Tomigaya Shibuya-ku Tokyo',
+	url: 'http://monocle.com/about/contacts/tokyo/'
+};
 books['Nadiff'] = {
 	center: new google.maps.LatLng(35.647618,139.714239),
 	cSize: 3,
