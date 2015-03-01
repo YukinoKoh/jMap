@@ -73,7 +73,7 @@ var infoBubbleGallery = new InfoBubble({
       arrowSize: 10,
       arrowPosition: 50,
       disableAutoPan: true,
-      hideCloseButton: false
+      hideCloseButton: true
     });
 
 function drawGallery(){
@@ -177,8 +177,8 @@ var infoBubbleBook = new InfoBubble({
       map: map,
       content: 'Books',
       shadowStyle: 1,
-      backgroundColor: 'rgba(2,246,0,0.93)',
-      borderColor: '#02f600',
+      backgroundColor: 'rgba(10,231,8,0.93)',
+      borderColor: '#09cd07',
       maxWidth:200,
       maxHeight:200,
       backgroundClassName: 'bubbleGallery',
@@ -212,7 +212,7 @@ function drawBook(){
             '<a href = "' + books[book].url + '">' + books[book].url +'</a></div>';
 
     // add event listener
-    google.maps.event.addListener(cherryCircles, 'click', function() {
+    google.maps.event.addListener(bookCircles, 'click', function() {
       infoBubbleBook.setContent(this.html);
       infoBubbleBook.setPosition(this.center);
       infoBubbleBook.open(map,this.bookCircles);

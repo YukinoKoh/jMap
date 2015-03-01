@@ -15,7 +15,7 @@ var ginza = new google.maps.LatLng(35.673053,139.766489);
 var akasakaPalace = new google.maps.LatLng(35.679553,139.728413);
 
 // custom MapType for maptOptions property, mapTypeId
-var Custom_MapType_1 = 'style_night';
+var Custom_MapType_1 = 'style_pop';
 // Array <MapTypeStyle> for creating StyleMapType
 var option_night = [
     {   // set weeker visibility to all geometry
@@ -42,7 +42,7 @@ var option_night = [
         elementType: "geometry",
         stylers: [
             {hue: "#00ff99"},
-            {saturation: 50},
+            {saturation: 30},
             {lightness: -8},
             {gamma: 0.5}
         ]
@@ -111,5 +111,6 @@ function initialize() {
     addWindow();
     drawGallery();
     drawCherry();
+    drawBook();
 }
 google.maps.event.addDomListener(window, 'load', initialize);
