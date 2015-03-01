@@ -18,24 +18,71 @@ var akasakaPalace = new google.maps.LatLng(35.679553,139.728413);
 var Custom_MapType_1 = 'style_night';
 // Array <MapTypeStyle> for creating StyleMapType
 var option_night = [
-    {
-    	// set all features saturation of their default color
+    {   // set weeker visibility to all geometry
+        elementType: "geometry",
     	stylers: [
-    		{saturation: -88},
-    		{lightness: -88},
-    		{hue:'#ff33ff'}
+            {visibility:'simplifed'},
+    		{saturation: -34},
+    		{lightness: 70},
+            {gamma: 2.54}
     	]
     },
-    {
-    	// set text color
-	    elementType: "labels.text.fill",
-	    stylers:[{color: '#202020'}]
-    },
-    {
-        // in addition, lower the lightness of water specifically
-        featureType: "water",
+    {   // set water visible
+        featureType:"water",
         elementType: "geometry",
-        stylers: [{lightness: -40}]
+        stylers: [
+            {hue: "#00ccff"},
+            {saturation: -45},
+            {lightness: -11},
+            {gamma: 0.63}
+        ]
+    },
+    {   // set park 
+        featureType:"poi.park",
+        elementType: "geometry",
+        stylers: [
+            {hue: "#00ff99"},
+            {saturation: 50},
+            {lightness: -8},
+            {gamma: 0.5}
+        ]
+    },
+    {   // set stronger visibility to all labels 
+        featureType:"all",
+        elementType: "label",
+        stylers: [
+            {visibility:'simplifed'},
+            {gamma: 0.38}
+        ]
+    },
+    {   // highway to be weeker
+        featureType: "road.highway",
+        elementType: "geometry",
+        stylers: [
+            {saturation: -74},
+            {lightness: 33},
+        ]
+    },
+    {   // junction label to be off
+        featureType: "poi.business",
+        elementType: "labels",
+        stylers: [
+            {visibility: 'off'}
+        ]
+    },
+    {   // hightway junction label to be off
+        featureType: "road.arterial",
+        elementType: "labels",
+        stylers: [
+            {visibility: 'off'}
+        ]
+    },
+    {   // hightway label to be off
+        featureType: "administrative",
+        elementType: "labels",
+        stylers: [
+            {visibility: 'off'}
+        ]
     }
 ];
 // map options 

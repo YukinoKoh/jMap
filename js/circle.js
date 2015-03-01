@@ -63,8 +63,8 @@ var infoBubbleGallery = new InfoBubble({
       map: map,
       content: '',
       shadowStyle: 1,
-      backgroundColor: 'rgba(212,238,10,0.7)',
-      borderColor: '#2c2c2c',
+      backgroundColor: 'rgba(239,49,37,0.93)',
+      borderColor: '#ef3125',
       maxWidth:300,
       backgroundClassName: 'bubbleGallery',
       borderRadius: 5,
@@ -79,11 +79,11 @@ var infoBubbleGallery = new InfoBubble({
 function drawGallery(){
   for (var gallery in galleries) { 
     var galleryOptions = {
-      strokeColor:'#fafd04',
-      strokeOpacity:0.8,
+      strokeColor:'#ef3125',
+      strokeOpacity:1,
       strokeWeight: 1,
-      fillColor:'#fafd03',
-      fillOpacity:0.6,
+      fillColor:'#ef3125',
+      fillOpacity:0.8,
       map: map,
       center: galleries[gallery].center,
       radius: galleries[gallery].cSize * 30
@@ -120,8 +120,8 @@ var infoBubbleCherry = new InfoBubble({
       map: map,
       content: 'Cherry',
       shadowStyle: 1,
-      backgroundColor: '#fb038f',
-      borderColor: '#2c2c2c',
+      backgroundColor: 'rgba(251,69,135,0.93)',
+      borderColor: '#fb038f',
       maxWidth:200,
       maxHeight:200,
       backgroundClassName: 'bubbleGallery',
@@ -131,17 +131,17 @@ var infoBubbleCherry = new InfoBubble({
       arrowSize: 10,
       arrowPosition: 50,
       disableAutoPan: true,
-      hideCloseButton: false
+      hideCloseButton: true
     });
 
 function drawCherry(){
   for (var cherry in cherries) { 
     var cherryOptions = {
-      strokeColor:'#fb038f',
+      strokeColor:'#e83f78',
       strokeOpacity:0.8,
       strokeWeight: 1,
-      fillColor:'#fb038f',
-      fillOpacity:0.6,
+      fillColor:'#fe79d6',
+      fillOpacity:1,
       map: map,
       center: cherries[cherry].center,
       radius: cherries[cherry].cSize * 30
@@ -161,6 +161,65 @@ function drawCherry(){
     // close infoBubble
     google.maps.event.addListener(map, "click", function () { 
       infoBubbleCherry.close();
+    });
+  }
+}
+
+
+
+/*
+ * infoBubble prototype for books & Cafe
+ *
+ * when it is called by Circle class,
+ * content and position are updated according to the circle properties 
+ */
+var infoBubbleBook = new InfoBubble({
+      map: map,
+      content: 'Books',
+      shadowStyle: 1,
+      backgroundColor: 'rgba(2,246,0,0.93)',
+      borderColor: '#02f600',
+      maxWidth:200,
+      maxHeight:200,
+      backgroundClassName: 'bubbleGallery',
+      borderRadius: 5,
+      borderWidth: 1,
+      arrowStyle: 0,
+      arrowSize: 10,
+      arrowPosition: 50,
+      disableAutoPan: true,
+      hideCloseButton: true
+    });
+
+function drawBook(){
+  for (var book in books) { 
+    var bookOptions = {
+      strokeColor:'#02f600',
+      strokeOpacity:0.8,
+      strokeWeight: 1,
+      fillColor:'#02f600',
+      fillOpacity:1,
+      map: map,
+      center: books[book].center,
+      radius: books[book].cSize * 30
+    };
+    // Add the circle for this city to the map.
+    var bookCircles = new google.maps.Circle(bookOptions);
+
+    // Prepare contents for infoBubble
+    bookCircles.html =  '<div><h5>' + books[book].gName + '</h5><br>'+ 
+            books[book].address+ '<br>'+ 
+            '<a href = "' + books[book].url + '">' + books[book].url +'</a></div>';
+
+    // add event listener
+    google.maps.event.addListener(cherryCircles, 'click', function() {
+      infoBubbleBook.setContent(this.html);
+      infoBubbleBook.setPosition(this.center);
+      infoBubbleBook.open(map,this.bookCircles);
+    });
+    // close infoBubble
+    google.maps.event.addListener(map, "click", function () { 
+      infoBubbleBook.close();
     });
   }
 }

@@ -8,8 +8,14 @@ To modify circle location, infoBubble contents: geoArray.js
 
 useful Links:
 
+Developer document for google.maps. MapTypeStyle:
+https://developers.google.com/maps/documentation/javascript/reference#MapTypeStyleFeatureType
+
 Sample usage of google.maps MapTypeStyle:
 https://developers.google.com/maps/documentation/javascript/examples/maptype-styled-simple
+
+Tester for google.maps MapTypeStyle:
+http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html
 
 Sample usage of google.maps.Circle class: 
 https://developers.google.com/maps/documentation/javascript/examples/circle-simple

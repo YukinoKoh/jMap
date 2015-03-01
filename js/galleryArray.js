@@ -24,7 +24,7 @@ galleries['331 Arts Chiyoda'] = {
 };
 galleries['Aoyama Meguro'] = {
 	center: new google.maps.LatLng(35.638824,139.697707),
-	cSize: 2,
+	cSize: 4,
 	gName: 'Aoyama Meguro',
 	address:'2-30-6 Kamimeguro Meguroku Tokyo',
 	url: 'http://aoyamameguro.com/en'
@@ -42,6 +42,13 @@ galleries['Hermes Gallery'] = {
 	gName: 'Maison Hermes',
 	address:'5-4-1 Ginza, Chuo-ku, Tokyo',
 	url: 'http://goo.gl/iLFxCb'
+};
+galleries['Gallery Koyanagi'] = {
+	center: new google.maps.LatLng(35.672089,139.770592),
+	cSize: 2,
+	gName: 'Gallery Koyanagi',
+	address:'Koyanagi Bldg. 8F, 1-7-5 Ginza Chuo-ku, Tokyo',
+	url: 'http://www.gallerykoyanagi.com/index.html'
 };
 galleries['Misako & Rosen'] = {
 	center: new google.maps.LatLng(35.660556,139.729167),
