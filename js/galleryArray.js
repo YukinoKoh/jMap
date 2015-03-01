@@ -146,7 +146,7 @@ galleries['WAKO WORKS OF ART'] = {
 	cSize: 3,
 	gName: 'WAKO WORKS OF ART',
 	address:'Piramide Bldg. 3F, 6-6-9 Roppongi, Minato-ku, Tokyo',
-	url: 'https://www.n-y-g.jp/'
+	url: 'http://www.wako-art.jp/top.php'
 };
 galleries['Watarium Museum'] = {
  	center: new google.maps.LatLng(35.670668,139.713372),
