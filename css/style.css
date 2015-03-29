@@ -5,6 +5,25 @@ body, html {
   margin: 0;
 }
 
+.header-cont{
+	width:100%;
+    position:fixed;
+    font-weight: bold;
+    top:0px;
+    height:40px;
+    font-size: 18px;
+    color:#ffffff;
+    background-color: #555555;
+    z-index: 1000;
+    text-align: center;
+    padding-top: 10px;
+}
+.header-cont a, 
+.header-cont a:visited,
+.header-cont a:hover{
+	text-decoration: none;
+	color: #ffffff;
+}
 #mapArea {
 	display: block;
 	height:100%;
@@ -13,7 +32,10 @@ body, html {
 h1{
 	color:#ff0000;
 }
-
+.selectedCity{
+	color: #ffffff;
+	text-decoration: underline;
+}
 .bubbleGallery h5{
 	color:#ffffff;
 	font-size: 14pt;

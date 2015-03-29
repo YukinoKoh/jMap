@@ -58,6 +58,13 @@ books['post'] = {
 	address:'2-10-3, MinamiEbisu, Shibuya-ku, Tokyo',
 	url: 'http://post-books.info/post-ebisu/'
 };
+books['Shibuya Publishing Booksellers'] = {
+	center: new google.maps.LatLng(35.664296,139.693151),
+	cSize: 2,
+	gName: 'Shibuya Publishing Booksellers',
+	address:'17-3 Kamiyamacho, Shibuya-ku Tokyo',
+	url: 'http://www.timeout.jp/en/tokyo/venue/2113/Shibuya-Publishing-Booksellers'
+};
 books['Tsutaya Daikanyama'] = {
 	center: new google.maps.LatLng(35.648870,139.699760),
 	cSize: 3,
