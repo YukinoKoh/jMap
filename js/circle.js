@@ -18,6 +18,7 @@
  * add infoBubble 
  */
 function addWindow(){
+  var contentString = ''
   // infoBubble
   var infoBubble = new InfoBubble({
       map: map,
@@ -39,7 +40,7 @@ function addWindow(){
   google.maps.event.addListener(cityCircle, 'click', function() {
     infoBubble.open();
   });
-  document.getElementById("close").addEventListener("click", function () { 
+    google.maps.event.addListener(map,"click", function () { 
     infoBubble.close();
   });
 }
