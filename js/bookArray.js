@@ -1,13 +1,11 @@
 /*
- * gallery location allay
+ * gallery location array
  *
  * cernter: lat, lng
  * cSize: circle size(*30)
  * name: gallery name
  */
 var books = {};
-
-
 books['ABC roppongi'] = {
 	center: new google.maps.LatLng(35.662411,139.731304),
 	cSize: 2,

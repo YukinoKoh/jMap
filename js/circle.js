@@ -18,7 +18,6 @@
  * add infoBubble 
  */
 function addWindow(){
-
    var contentString = '<div>hello</div>';
   // infoBubble
   var infoBubble = new InfoBubble({
