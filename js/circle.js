@@ -1,7 +1,5 @@
 /*
  * add circle on the map
- *
- * useful link: https://developers.google.com/maps/documentation/javascript/examples/circle-simple
  */
  function draw(){
     var myCity = {
@@ -18,13 +16,8 @@
 }
 /*
  * add infoBubble 
- *
- * useful link:http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobubble/examples/example.html
  */
 function addWindow(){
-  
-  var contentString = '<div>hello</div>';
-  
   // infoBubble
   var infoBubble = new InfoBubble({
       map: map,
@@ -43,12 +36,10 @@ function addWindow(){
       disableAutoPan: true,
       hideCloseButton: true
     });
-  
-  
   google.maps.event.addListener(cityCircle, 'click', function() {
     infoBubble.open();
   });
-  google.maps.event.addListener(map, "click", function () { 
+  document.getElementById("close").addEventListener("click", function () { 
     infoBubble.close();
   });
 }
@@ -63,8 +54,8 @@ var infoBubbleGallery = new InfoBubble({
       map: map,
       content: '',
       shadowStyle: 1,
-      backgroundColor: 'rgba(239,49,37,0.93)',
-      borderColor: '#ef3125',
+      backgroundColor: 'rgba(250,101,185,0.93)',
+      borderColor: '#fa65b9',
       maxWidth:300,
       backgroundClassName: 'bubbleGallery',
       borderRadius: 5,
@@ -79,22 +70,22 @@ var infoBubbleGallery = new InfoBubble({
 function drawGallery(){
   for (var gallery in galleries) { 
     var galleryOptions = {
-      strokeColor:'#ef3125',
+      strokeColor:'#fa65b9',
       strokeOpacity:1,
       strokeWeight: 1,
-      fillColor:'#ef3125',
+      fillColor:'#fa65b9',
       fillOpacity:0.8,
       map: map,
       center: galleries[gallery].center,
-      radius: galleries[gallery].cSize * 30
+      radius: 60
     };
     // Add the circle for this city to the map.
     var galleryCircles = new google.maps.Circle(galleryOptions);
 
     // Prepare contents for infoBubble
-    galleryCircles.html = '<div><h5>' + galleries[gallery].gName + '</h5><br>'+ 
+    galleryCircles.html = '<div class="left"><h5>' + galleries[gallery].gName + '</h5><br>'+ 
             galleries[gallery].address+ '<br>'+ 
-            '<a href = "' + galleries[gallery].url + '">' + galleries[gallery].url +'</a></div>';
+            '<a href = "' + galleries[gallery].url + '">' + galleries[gallery].url +'</a></div><div id = "close"class="close">x</div>';
 
     // add event listener
     google.maps.event.addListener(galleryCircles, 'click', function() {
@@ -111,67 +102,8 @@ function drawGallery(){
 
 
 /*
- * infoBubble prototype for cherry
- *
- * when it is called by Circle class,
- * content and position are updated according to the circle properties 
- */
-var infoBubbleCherry = new InfoBubble({
-      map: map,
-      content: 'Cherry',
-      shadowStyle: 1,
-      backgroundColor: 'rgba(251,69,135,0.93)',
-      borderColor: '#fb038f',
-      maxWidth:200,
-      maxHeight:200,
-      backgroundClassName: 'bubbleGallery',
-      borderRadius: 5,
-      borderWidth: 1,
-      arrowStyle: 0,
-      arrowSize: 10,
-      arrowPosition: 50,
-      disableAutoPan: true,
-      hideCloseButton: true
-    });
-
-function drawCherry(){
-  for (var cherry in cherries) { 
-    var cherryOptions = {
-      strokeColor:'#e83f78',
-      strokeOpacity:0.8,
-      strokeWeight: 1,
-      fillColor:'#fe79d6',
-      fillOpacity:1,
-      map: map,
-      center: cherries[cherry].center,
-      radius: cherries[cherry].cSize * 30
-    };
-    // Add the circle for this city to the map.
-    var cherryCircles = new google.maps.Circle(cherryOptions);
-
-    // Prepare contents for infoBubble
-    cherryCircles.html = '<div><h5>Cherry Blossom!</h5><br>' + cherries[cherry].cname+ '</div>';
-
-    // add event listener
-    google.maps.event.addListener(cherryCircles, 'click', function() {
-      infoBubbleCherry.setContent(this.html);
-      infoBubbleCherry.setPosition(this.center);
-      infoBubbleCherry.open(map,this.cherryCircles);
-    });
-    // close infoBubble
-    google.maps.event.addListener(map, "click", function () { 
-      infoBubbleCherry.close();
-    });
-  }
-}
-
-
-
-/*
  * infoBubble prototype for books & Cafe
  *
- * when it is called by Circle class,
- * content and position are updated according to the circle properties 
  */
 var infoBubbleBook = new InfoBubble({
       map: map,

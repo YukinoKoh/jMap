@@ -110,7 +110,6 @@ function initialize() {
     draw();
     addWindow();
     drawGallery();
-    drawCherry();
     drawBook();
 }
 google.maps.event.addDomListener(window, 'load', initialize);
