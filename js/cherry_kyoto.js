@@ -36,6 +36,13 @@ cherries_kyoto['kodaiji'] = {
 	cInfo: 'light up',
 	url: 'https://www.kodaiji.com/e_index.html'
 };
+cherries_kyoto['kyoto impereial palace'] = {
+	center: new google.maps.LatLng(35.025413,135.762125),
+	cSize: 2,
+	cName: 'kyoto Impereial Palace',
+	cInfo: 'morning is the best time',
+	url: 'http://sankan.kunaicho.go.jp/english/index.html'
+};
 cherries_kyoto['nijo'] = {
 	center: new google.maps.LatLng(35.011892,135.750473),
 	cSize: 4,
