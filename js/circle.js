@@ -40,8 +40,9 @@ var infoBubbleBook = new InfoBubble({
 
 function drawArray(array_name,color){
   for (var element in array_name) { 
-	console.log("array_name: ", array_name);
-	console.log("element: ", element);
+	console.log("center: ", array_name[element].center);
+	console.log("gName: ", array_name[element].gName);
+	
     var options = {
       strokeColor:color,
       strokeOpacity:1,
