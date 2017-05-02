@@ -6,6 +6,7 @@
  */
 function drawArray(array_name,color){
     for (var element in array_name) { 
+      (function(){
         var options = {
           strokeColor:color,
           strokeOpacity:1,
@@ -47,7 +48,7 @@ function drawArray(array_name,color){
        google.maps.event.addListener(map, 'click', function () { 
            infoBubbleElement.close();
         });
-    } 
-}
+  }());
+}}
 
 
