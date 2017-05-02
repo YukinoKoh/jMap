@@ -107,9 +107,9 @@ function initialize() {
   	map.mapTypes.set(Custom_MapType_1, new google.maps.StyledMapType(option_night));
     // drawing circles in the map
     // function specified in circle.js
-    // draw();
-    addWindow();
-    drawGallery();
-    drawBook();
+    //draw();
+    //addWindow();
+    drawArray(gallery,'#fa65b9');
+    drawArray(books,'#02f600');
 }
 google.maps.event.addDomListener(window, 'load', initialize);
