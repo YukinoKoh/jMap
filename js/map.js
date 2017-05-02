@@ -109,7 +109,8 @@ function initialize() {
     // function specified in circle.js
     //draw();
     //addWindow();
-    drawArray('galleries','#fa65b9');
+    drawArray(gallery,'#fa65b9');
+    drawArray(books,'#02f600');
     drawBook();
 }
 google.maps.event.addDomListener(window, 'load', initialize);

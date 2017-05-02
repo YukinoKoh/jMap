@@ -40,8 +40,7 @@ var infoBubbleBook = new InfoBubble({
 
 function drawArray(array_name,color){
   for (var element in array_name) { 
-	console.log("center: ", array_name[element].center);
-	console.log("gName: ", array_name[element].gName);
+	console.log("element: ", element);
 	
     var options = {
       strokeColor:color,
@@ -56,7 +55,7 @@ function drawArray(array_name,color){
     // Add the circle for this city to the map.
     var elementCircles = new google.maps.Circle(options);
     // Prepare contents for infoBubble
-    elementCircles.html = '<div class="left"><h5>' + array_name[element].gName + '</h5><br>'+ 
+    elementCircles.html = '<div class="left"><h5>' + element+ '</h5><br>'+ 
             array_name[element].address+ '<br>'+ 
             '<a href = "' + array_name[element].url + '">' + array_name[element].url +'</a></div><div id = "close"class="close">x</div>';
 
@@ -74,37 +73,5 @@ function drawArray(array_name,color){
 }
 
 
-function drawBook(){
-  for (var book in books) { 
-    var bookOptions = {
-      strokeColor:'#02f600',
-      strokeOpacity:0.8,
-      strokeWeight: 1,
-      fillColor:'#02f600',
-      fillOpacity:1,
-      map: map,
-      center: books[book].center,
-      radius: books[book].cSize * 30
-    };
-    // Add the circle for this city to the map.
-    var bookCircles = new google.maps.Circle(bookOptions);
-
-    // Prepare contents for infoBubble
-    bookCircles.html =  '<div><h5>' + books[book].gName + '</h5><br>'+ 
-            books[book].address+ '<br>'+ 
-            '<a href = "' + books[book].url + '">' + books[book].url +'</a></div>';
-
-    // add event listener
-    google.maps.event.addListener(bookCircles, 'click', function() {
-      infoBubbleBook.setContent(this.html);
-      infoBubbleBook.setPosition(this.center);
-      infoBubbleBook.open(map,this.bookCircles);
-    });
-    // close infoBubble
-    google.maps.event.addListener(map, "click", function () { 
-      infoBubbleBook.close();
-    });
-  }
-}
 
 
