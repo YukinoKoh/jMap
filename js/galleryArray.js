@@ -6,6 +6,12 @@
  * name: gallery name
  */
 var gallery = {};
+gallery['ESPACE LOUIS VUITTON'] = {
+        center: new google.maps.LatLng(35.666566,139.709102),
+        note: 'Contemporary',
+        address:'Louis Vuitton Omotesando Bldg. 7F 5-7-5 Jingumae, Shibuya-ku, Tokyo',
+        url: 'http://www.espacelouisvuittontokyo.com/en/'
+};
 gallery['331 Arts Chiyoda'] = {
 	center: new google.maps.LatLng(35.704213,139.770833),
 	note: 'Art / Event',
@@ -21,7 +27,7 @@ gallery['ARCHI-DEPOT Museum'] = {
 gallery['Tokyo Metropolitan Teien Art Museum'] = {
 	center: new google.maps.LatLng(35.635753,139.720453),
 	note: '+ Garden',
-	address:'5 Chome−21-9, Shirokanedai, Minato-ku, Tokyo', 
+	address:'5−21-9, Shirokanedai, Minato-ku, Tokyo', 
 	url: 'http://www.teien-art-museum.ne.jp/en/'
 };
 gallery['Aoyama Meguro'] = {

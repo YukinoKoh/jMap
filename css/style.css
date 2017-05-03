@@ -8,7 +8,7 @@ body, html {
 	width:100%;
     position:fixed;
     font-weight: bold;
-    top:0px;
+    bottom:0px;
     height:40px;
     font-size: 18px;
     color:#a4abb8;

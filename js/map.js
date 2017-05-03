@@ -7,6 +7,7 @@ var tokyo = new google.maps.LatLng(35.68537,139.76329);
 var roppongi = new google.maps.LatLng(35.661867,139.731351);
 var ginza = new google.maps.LatLng(35.673053,139.766489);
 var akasakaPalace = new google.maps.LatLng(35.679553,139.728413);
+var daikanyama = new google.maps.LatLng(35.649623,139.703326);
 
 // custom MapType for maptOptions property, mapTypeId
 //var Custom_MapType_1 = 'style_pop';
@@ -26,7 +27,9 @@ var map_style = [
 	 * feature
 	 */
 	//administative
-    	{featureType: 'administrative',stylers: [{visibility: 'off'}]},
+    	//{featureType: 'administrative.land_percel', elementType: 'labels', stylers: [{visibility: 'off'}]},
+    	{featureType: 'administrative.neighborhood',elementType: 'labels', stylers: [{visibility: 'off'}]},
+	//{featureType: 'administrative.locality',  elementType:'labels.text.fill', stylers: [{visibility:'off'}]},
 	// landscape
 	{featureType:'landscape', elementType:'geometry', stylers: [{color:'#29292a'}]},
 	{featureType:'water', stylers: [{color:'#1b1b1f'}]},
@@ -48,13 +51,13 @@ var map_style = [
         {featureType: 'road.highway', elementType: 'geometry', stylers: [ {color: '#212122'}]},     
     	{featureType: "road.arterial",  stylers: [ {visibility: 'off'} ]},
 	// transit
-	{featureType: 'transit', elementType: 'labels.icon', stylers: [ {visibility: 'off'}]}, 
-	{featureType: 'transit', elementType: 'geometry', stylers: [ {visibility: 'off'}]} 
+	{featureType: 'transit.line', elementType: 'labels', stylers: [ {visibility: 'off'}]}, 
+	{featureType: 'transit.station', elementType: 'labels.icon', stylers: [ {color: '#2f2f2f'}]} 
 	//{featureType: 'transit', elementType: 'geometry.fill', stylers: [ {color: '#1a1a1a'}]}, 
 	//{featureType: 'transit', elementType: 'geometry.stroke', stylers: [ {color: '#2f2f2f'}]} 
 ];
 var mapOptions = {
-		center:akasakaPalace,
+		center:daikanyama,
 		zoom:13,   
 	    	mapTypeId: google.maps.MapTypeId.ROADMAP,
 		styles: map_style
