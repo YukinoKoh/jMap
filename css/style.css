@@ -9,7 +9,7 @@ body, html {
     position:fixed;
     font-weight: bold;
     bottom:0px;
-    height:40px;
+    height:30px;
     font-size: 18px;
     color:#a4abb8;
     background-color: #52596a;
@@ -29,7 +29,8 @@ body, html {
 }
 #mapArea {
 	display: block;
-	height:100%;
+	height: -webkit-calc(100% - 30px) ;
+	height: calc(100% - 30px) ;
 }
 
 .bubbleGallery h5{
