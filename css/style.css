@@ -29,8 +29,8 @@ body, html {
 }
 #mapArea {
 	display: block;
-	height: -webkit-calc(100% - 30px) ;
-	height: calc(100% - 30px) ;
+	height: -webkit-calc(100% - 40px) ;
+	height: calc(100% - 40px) ;
 }
 
 .bubbleGallery h5{
