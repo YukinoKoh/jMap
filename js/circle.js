@@ -7,18 +7,22 @@
 function drawArray(array_name,color){
     for (var element in array_name) { 
       (function(){
+	var circle = {
+	  path: 'M 0 0 m -10 0  a 10,10 0 1,0 20,0 a 10,10 0 1,0 -20,0 z',
+          fillColor: '#fff',
+          fillOpacity: 0.6,
+	  strokeColor:color,
+	  strokeOpacity: 0.8,
+	  strokeWeight:10,
+          scale: 0.7,
+	};
         var options = {
-          strokeColor:color,
-          strokeOpacity:1,
-          strokeWeight: 1,
-          fillColor:color,
-          fillOpacity:0.8,
           map: map,
-          center: array_name[element].center,
-          radius: 90
+          position: array_name[element].center,
+	  icon: circle
        };
        // Add the circle for this city to the map.
-       var elementCircles = new google.maps.Circle(options);
+       var elementCircles = new google.maps.Marker(options);
        // Prepare contents for infoBubble
        var bubbleContent = '<div><h5>' + element+ '</h5><br>' + array_name[element].address+ '<br>'+ 
             '<a href = "' + array_name[element].url + '">' + array_name[element].url +'</a></div>';
@@ -41,7 +45,7 @@ function drawArray(array_name,color){
 
        // add event listener
        google.maps.event.addListener(elementCircles, 'click', function() {
-           infoBubbleElement.setPosition(this.center);
+           infoBubbleElement.setPosition(this.position);
            infoBubbleElement.open(map,this.elementCircles);
        });
        // close infoBubble
