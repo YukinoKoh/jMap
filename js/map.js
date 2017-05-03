@@ -15,30 +15,43 @@ var map_style = [
 	 * base 
 	 */
 	// color
-	 {elementType: 'geometry', 
-	stylers: [{color: '#242f3e'},{visibility:'simplifed'}, {saturation: -34}, {lightness: 70}, {gamma: 2.5}]
-    },
+	{elementType: 'geometry.fill', stylers: [{color: '#29292a'}]},
+	{elementType: 'geometry.stroke', stylers: [{color: '#39393b'}]},
 	//text
-	 //{elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
-	{elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},   
-	{elementType: "label", stylers: [ {visibility:'simplifed'}, {gamma: 0.38}]},
+	 {elementType: 'labels.text.stroke', stylers: [{color: '#1b1b1c'}]},
+	{elementType: 'labels.text.fill', stylers: [{color: '#565658'}]},   
+	//{elementType: "label", stylers: [ {visibility:'simplifed'}, {gamma: 0.38}]},
     	
 	/* 
 	 * feature
 	 */
+	//administative
+    	{featureType: 'administrative',stylers: [{visibility: 'off'}]},
+	// landscape
+	{featureType:'landscape', elementType:'geometry', stylers: [{color:'#29292a'}]},
+	{featureType:'water', stylers: [{color:'#1b1b1f'}]},
+
 	// POI
-        {featureType: "poi.business", elementType: "labels", stylers: [{visibility: 'off'}]},
-    	{featureType: "administrative", elementType: "labels",stylers: [ {visibility: 'off'}]},
-       
-	//water
-        {featureType:"water", elementType: "geometry",
-        stylers: [ {hue: "#00ccff"}, {saturation: -45}, {lightness: -11}, {gamma: 0.63}]},
-    	// set park 
-        {featureType:"poi.park", elementType: "geometry",
-        stylers: [{hue: "#00ff99"}, {saturation: 30}, {lightness: -8}, {gamma: 0.5}]},
+	{featureType: 'poi.attraction', elementType: 'labels.icon', stylers:[{visibility:'off'}]},
+        {featureType: 'poi.business',  stylers: [{visibility: 'off'}]},
+        {featureType: 'poi.government',  stylers: [{visibility: 'off'}]},
+        {featureType: 'poi.medical',  stylers: [{visibility: 'off'}]},
+        {featureType: 'poi.park',  elementType: 'geometry.fill', stylers: [{color: '#202021'}]},
+        {featureType: 'poi.park',  elementType: 'geometry.stroke', stylers: [{color: '#212123'}]},
+	{featureType: 'poi.park', elementType: 'labels.icon', stylers:[{visibility:'off'}]},
+	{featureType: 'poi.place_of_worship', stylers:[{visibility: 'off'}]},
+	{featureType: 'poi.school', stylers:[{visibility: 'off'}]},
+	{featureType: 'poi.sports_complex', stylers:[{visibility: 'off'}]},
        // road
-        {featureType: "road.highway", elementType: "geometry",stylers: [ {saturation: -74}, {lightness: 33}]},
-    	{featureType: "road.arterial", elementType: "labels",stylers: [ {visibility: 'off'} ]},
+	{featureType: 'road', elementType: 'labels', stylers: [ {visibility: 'off'} ]},
+	{featureType: 'road.local', elementType: 'geometry', stylers: [ {color: '#1a1a1b'}]},
+        {featureType: 'road.highway', elementType: 'geometry', stylers: [ {color: '#212122'}]},     
+    	{featureType: "road.arterial",  stylers: [ {visibility: 'off'} ]},
+	// transit
+	{featureType: 'transit', elementType: 'labels.icon', stylers: [ {visibility: 'off'}]}, 
+	{featureType: 'transit', elementType: 'geometry', stylers: [ {visibility: 'off'}]} 
+	//{featureType: 'transit', elementType: 'geometry.fill', stylers: [ {color: '#1a1a1a'}]}, 
+	//{featureType: 'transit', elementType: 'geometry.stroke', stylers: [ {color: '#2f2f2f'}]} 
 ];
 var mapOptions = {
 		center:akasakaPalace,
@@ -51,7 +64,8 @@ function initMap() {
 	// create map
 	map = new google.maps.Map(document.getElementById("mapArea"), mapOptions);	
     	// drawing circles in the map
-    	drawArray(gallery,'#fa65b9');
-    	drawArray(books,'#02f600');
+    	drawArray(gallery,'#fcc865');
+    	drawArray(books,'#48f0ce');
+    	drawArray(food,'#fe6baa');
 }
 google.maps.event.addDomListener(window, 'load', initMap);

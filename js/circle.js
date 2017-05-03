@@ -10,11 +10,11 @@ function drawArray(array_name,color){
 	var circle = {
 	  path: 'M 0 0 m -10 0  a 10,10 0 1,0 20,0 a 10,10 0 1,0 -20,0 z',
           fillColor: '#fff',
-          fillOpacity: 0.6,
+          fillOpacity: 0.8,
 	  strokeColor:color,
-	  strokeOpacity: 0.8,
-	  strokeWeight:10,
-          scale: 0.7,
+	  strokeOpacity: 0.2,
+	  strokeWeight:18,
+          scale: 0.5,
 	};
         var options = {
           map: map,
@@ -24,8 +24,8 @@ function drawArray(array_name,color){
        // Add the circle for this city to the map.
        var elementCircles = new google.maps.Marker(options);
        // Prepare contents for infoBubble
-       var bubbleContent = '<div><h5>' + element+ '</h5><br>' + array_name[element].address+ '<br>'+ 
-            '<a href = "' + array_name[element].url + '">' + array_name[element].url +'</a></div>';
+       var bubbleContent = '<div><h5>' + element+ '</h5><br />Note: ' + array_name[element].note + '<br/><br>Add: ' + array_name[element].address+ '<br><br/>'+ 
+            'URL: <a href = "' + array_name[element].url + '">' + array_name[element].url +'</a></div>';
 
 	var infoBubbleElement = new InfoBubble({
       		map: map,
