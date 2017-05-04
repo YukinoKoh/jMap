@@ -4,51 +4,70 @@ body, html {
   width:100%;
   margin: 0;
 }
-.header-cont{
-	width:100%;
+#textArea{
+    width:100%;
     position:fixed;
-    font-weight: bold;
     bottom:0px;
-    height:30px;
+    height:140px;
     font-size: 18px;
     color:#a4abb8;
-    background-color: #52596a;
     z-index: 90;
     text-align: center;
     padding-top: 10px;
 }
-.header-cont a, 
-.header-cont a:visited,
-.header-cont a:hover{
-    color:#848b98;
+#textCont{
+   width:80%;
+   margin:0 auto;
+   text-align:left;
+   font-weight:lighter;
+   color:#000;
+   padding: 10px;
+   font-size:10px;
 }
-.header-cont small{
-    font-size:10px;
-    color:#848b98;
-    font-weight: lighter;
-}
-#mapArea {
-	display: block;
-	height: -webkit-calc(100% - 40px) ;
-	height: calc(100% - 40px) ;
-}
-
-.bubbleGallery h5{
+#textCont h2{
 	color:#000000;
-	font-weight:lighter;
 	font-size: 14pt;
 	padding:0px;
 	margin:0px;
 }
-.bubbleGallery{
-	color:#000;
-	font-weight:lighter;
-	font-size: 10pt;
-	padding: 10;
-	z-index:100;
+#textCont h4{
+	color:#fff;
+	font-size:12px;
+	height:15px;
+	width: 60px;
+	padding:3px;
+	margin:0px;
 }
-.bubbleGallery a{
-	text-decoration: none;
-	color:#000000;
+#textCont a{
+	text-decoration: underline;
 	font-size: 10pt;
 }
+.neutral{
+    background-color:#52596a;
+    color:#848b98;
+}
+.gallery h4{
+	background-color:#fcc865;
+}
+.gallery a{
+	color:#fcc865;
+}
+.books h4{
+	background-color:#48f0ce;
+}
+.books a{
+	color:#48f0ce;
+}
+.food h4{
+	background-color:rgb(254, 107, 170);
+}
+.food a{
+	color:rgb(254, 107, 170);
+}
+
+#mapArea {
+	display: block;
+	height: -webkit-calc(100% - 150px) ;
+	height: calc(100% - 150px) ;
+}
+

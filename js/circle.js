@@ -4,7 +4,8 @@
  * when it is called by Circle class,
  * content and position are updated according to the circle properties 
  */
-function drawArray(array_name,color){
+// draw circles
+function drawArray(array_name,color, class_name){
     for (var element in array_name) { 
       (function(){
 	var circle = {
@@ -24,9 +25,9 @@ function drawArray(array_name,color){
        // Add the circle for this city to the map.
        var elementCircles = new google.maps.Marker(options);
        // Prepare contents for infoBubble
-       var bubbleContent = '<div><h5>' + element+ '</h5><br />Note: ' + array_name[element].note + '<br/><br>Add: ' + array_name[element].address+ '<br><br/>'+ 
-            'URL: <a href = "' + array_name[element].url + '">' + array_name[element].url +'</a></div>';
-
+       var text = '<div><h4 class="' + class_name + '">' + class_name + '</h4><h2>' + element+ '</h2><br>URL: <a href = "' + array_name[element].url + '">' + array_name[element].url +'</a></div>';
+	/*
+	var bubbleContent = text;
 	var infoBubbleElement = new InfoBubble({
       		map: map,
       		content: bubbleContent,
@@ -42,17 +43,26 @@ function drawArray(array_name,color){
       		disableAutoPan: true,
 		closeSrc:'img/close.png'
     	});
+	*/
 
        // add event listener
        google.maps.event.addListener(elementCircles, 'click', function() {
-           infoBubbleElement.setPosition(this.position);
+	   $("#textArea").removeClass().addClass(class_name);
+	   $("#textCont").removeClass().addClass(class_name);
+	   document.getElementById("textCont").innerHTML = text;
+           /*infoBubbleElement.setPosition(this.position);
            infoBubbleElement.open(map,this.elementCircles);
+	   */
        });
-       // close infoBubble
-       google.maps.event.addListener(map, 'click', function () { 
-           infoBubbleElement.close();
-        });
+
+        google.maps.event.addListener(map, 'click', function () { 
+           $("#textArea").removeClass().addClass('neutral');
+           $("#textCont").removeClass().addClass('neutral');
+           document.getElementById("textCont").innerHTML = default_text;	
+	});
+       /*  close infoBubble
+        *    infoBubbleElement.close();
+	*/
   }());
 }}
-
-
+var default_text = '<div class="neutral"><h1> Welcome to Tokyo</h1><p>Those are my favourite places :) Let me know if you have any recos. </p></div>'; 
