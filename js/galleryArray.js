@@ -29,7 +29,7 @@ gallery['Aoyama Meguro'] = {
 gallery['Maison Hermes'] = {
 	latlng: [35.6688001,139.7286596],
 	address:'5-4-1 Ginza, Chuo-ku, Tokyo',
-	url: 'http://goo.gl/iLFxCb'
+	url: 'http://www.maisonhermes.jp/ginza/le-forum/'
 };
 gallery['Mori Art Museum'] = {
 	latlng: [35.660556,139.729167],
