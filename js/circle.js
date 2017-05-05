@@ -28,7 +28,7 @@ function drawArray(array_name,color, class_name){
        var mapsUrl = 'https://www.google.co.jp/maps/dir/Current+Location/' + element + '/@' + latlng.toString() + ',14z';
 	console.log("%s url: %s", element, mapsUrl); 
        // Prepare contents for infoBubble
-       var text = '<div><h4 class="' + class_name + '">' + class_name + '</h4><h2>' + element+ '</h2><br>URL: <a href = "' + array_name[element].url + '">' + array_name[element].url +'</a><br/>How to get there:  <a href="' + mapsUrl + '" target="_blank">Recommended route</a></div>';
+       var text = '<div><h4 class="' + class_name + '">' + class_name + '</h4><h2>' + element+ '</h2><br>From who: ' + array_name[element].who + '<br/>URL: <a href = "' + array_name[element].url + '">' + array_name[element].url +'</a><br/>How to get there:  <a href="' + mapsUrl + '" target="_blank">Recommended route</a></div>';
 	/*
 	var bubbleContent = text;
 	var infoBubbleElement = new InfoBubble({
@@ -68,4 +68,4 @@ function drawArray(array_name,color, class_name){
 	*/
   }());
 }}
-var default_text = '<div class="neutral"><h1> Welcome to Tokyo</h1><p>Those are my favourite places :) Let me know if you have any recos. </p></div>'; 
+var default_text = 'div class="neutral"><h1>Little nice stories I heard ..</h1><p>I like going to talks and listen wonderful stories. </p></div>';
