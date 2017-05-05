@@ -1,4 +1,4 @@
-# ploiing on Map
+# plots on Map
 This codes are to plot POIs on google maps using its API. 
 
 Sampel js to modify map option, especially its appearance: map.js
