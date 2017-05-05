@@ -17,15 +17,18 @@ function drawArray(array_name,color, class_name){
 	  strokeWeight:18,
           scale: 0.5,
 	};
+	var latlng =  array_name[element].latlng;
         var options = {
           map: map,
-          position: array_name[element].center,
+          position:   new google.maps.LatLng(latlng[0],latlng[1]),
 	  icon: circle
        };
        // Add the circle for this city to the map.
        var elementCircles = new google.maps.Marker(options);
+       var mapsUrl = 'https://www.google.co.jp/maps/dir/Current+Location/' + element + '/@' + latlng.toString() + ',14z';
+	console.log("%s url: %s", element, mapsUrl); 
        // Prepare contents for infoBubble
-       var text = '<div><h4 class="' + class_name + '">' + class_name + '</h4><h2>' + element+ '</h2><br>URL: <a href = "' + array_name[element].url + '">' + array_name[element].url +'</a></div>';
+       var text = '<div><h4 class="' + class_name + '">' + class_name + '</h4><h2>' + element+ '</h2><br>URL: <a href = "' + array_name[element].url + '">' + array_name[element].url +'</a><br/>How to get there:  <a href="' + mapsUrl + '" target="_blank">Recommended route</a></div>';
 	/*
 	var bubbleContent = text;
 	var infoBubbleElement = new InfoBubble({
