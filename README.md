@@ -1,24 +1,17 @@
-# tokyoMap
-Tokyo events map google map APIs
+# ploiing on Map
+This codes are to plot POIs on google maps using its API. 
 
-To modify mapOption: map.js
-To modify circle drawing option: circle.js
-To modify popups(infoBubble) style: circle.js infoBubble ptototype, or style.css
-To modify circle location, infoBubble contents: geoArray.js
+Sampel js to modify map option, especially its appearance: map.js
+Sample js to modify circle drawing option: circle.js
+Sample js (actually JSON) to store geo location and info: xxArray.js
 
 useful Links:
 
-Developer document for google.maps. MapTypeStyle:
-https://developers.google.com/maps/documentation/javascript/reference#MapTypeStyleFeatureType
+Developer document of Google Maps Style - reference for map.js:
+https://developers.google.com/maps/documentation/javascript/styling
 
-Sample usage of google.maps MapTypeStyle:
-https://developers.google.com/maps/documentation/javascript/examples/maptype-styled-simple
+Developer document of custom Marker - reference for circle.js:
+https://developers.google.com/maps/documentation/javascript/examples/marker-symbol-custom
 
-Tester for google.maps MapTypeStyle:
-http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html
-
-Sample usage of google.maps.Circle class: 
-https://developers.google.com/maps/documentation/javascript/examples/circle-simple
-
-Property samples of infoBubble:
-http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobubble/examples/example.html 
+W3school of JSON - reference for Array.js
+https://www.w3schools.com/js/js_json_intro.asp
