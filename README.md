@@ -26,7 +26,7 @@ You can find this project [here](http://yukinokoh.github.io/jMap/).
 ### To edit title and introduction
 Edit *h1*  and *p* elements in *var dafault\_text* in `circle.js` 
 
-## To edit plotting data
+### To edit plotting data
 ##### 1. Edit the following elements in `xxArray.js`.
 - your_category_name 
 - name_of_place
@@ -59,12 +59,12 @@ drawArray(your_category_name,'#color', 'your_class_name');
 
 ```
 
-## To edit map style
+### To edit map style
 Edit map options in `map.js`
 
 Documentation of [Style Reference](https://developers.google.com/maps/documentation/javascript/style-reference)
 
-## To edit Marker
+### To edit Marker
 Edit **circle** in `circle.js`
 
 Documentation of [Custom Marker](https://developers.google.com/maps/documentation/javascript/examples/marker-symbol-custom)
