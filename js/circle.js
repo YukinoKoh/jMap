@@ -4,8 +4,14 @@
  * when it is called by Circle class,
  * content and position are updated according to the circle properties 
  */
+
+// default text that appear bottom of the page
+var default_text = '<div class="neutral">' +
+	'<h1>Little nice stories I heard ..</h1>' +
+	'<p>I like going to talks and listen wonderful stories. </p></div>';
+
 // draw circles
-function drawArray(array_name,color, class_name){
+function drawArray(array_name, color, class_name){
     for (var element in array_name) { 
       (function(){
 	var circle = {
@@ -26,10 +32,9 @@ function drawArray(array_name,color, class_name){
        // Add the circle for this city to the map.
        var elementCircles = new google.maps.Marker(options);
        var mapsUrl = 'https://www.google.co.jp/maps/dir/Current+Location/' + element + '/@' + latlng.toString() + ',14z';
-	console.log("%s url: %s", element, mapsUrl); 
-       // Prepare contents for infoBubble
-       var text = '<div><h4 class="' + class_name + '">' + class_name + '</h4><h2>' + element+ '</h2><br>From who: ' + array_name[element].who + '<br/>URL: <a href = "' + array_name[element].url + '">' + array_name[element].url +'</a><br/>How to get there:  <a href="' + mapsUrl + '" target="_blank">Recommended route</a></div>';
-	/*
+       var text = '<div><h4 class="' + class_name + '">' + class_name + '</h4><h2>' + element + '</h2><br/>URL: <a href = "' + array_name[element].url + '">' + array_name[element].url +'</a><br/>How to get there:  <a href="' + mapsUrl + '" target="_blank">Recommended route</a></div>';
+       /*  These lines for infobubble. To know more about infobubble, visit
+	   https://github.com/googlemaps/js-info-bubble
 	var bubbleContent = text;
 	var infoBubbleElement = new InfoBubble({
       		map: map,
@@ -61,11 +66,10 @@ function drawArray(array_name,color, class_name){
         google.maps.event.addListener(map, 'click', function () { 
            $("#textArea").removeClass().addClass('neutral');
            $("#textCont").removeClass().addClass('neutral');
-           document.getElementById("textCont").innerHTML = default_text;	
 	});
-       /*  close infoBubble
-        *    infoBubbleElement.close();
-	*/
   }());
 }}
-var default_text = 'div class="neutral"><h1>Little nice stories I heard ..</h1><p>I like going to talks and listen wonderful stories. </p></div>';
+
+$(document ).ready(function() {
+    document.getElementById("textCont").innerHTML = default_text;	
+});

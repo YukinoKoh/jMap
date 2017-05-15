@@ -1,17 +1,60 @@
-# plots on Map
-This codes are to plot POIs on google maps using its API. 
+![jMAP image](img/jmap.jpg)
+Which information is indispensable? It is the question asked throughout this little project exploring with [Google Maps API](https://developers.google.com/maps/documentation/javascript/). You can find this project [here](http://yukinokoh.github.io/jMap/).
 
-Sampel js to modify map option, especially its appearance: map.js
-Sample js to modify circle drawing option: circle.js
-Sample js (actually JSON) to store geo location and info: xxArray.js
+## Structure
+- `index.html`: This html file shows your map on browser, 
+	loading necessary js files
+- js
+  - `map.js`: javascript to customize Google Maps
+  - `circle.js`: javascript to plot in the map
+  - `xxArray.js`: Data to plot in the map
+- css
+  - `style.css`: css to custom mainly text area
+- img
+  - `close.png`: only in case of use infobubble, which is in default cross outed
+  - `tokyo\_favi.png`: favicon image 
+  - `jmap.jpg`: sample image you see in README
+- README.md
+- LICENSE.txt
 
-useful Links:
+## Usage
+### To modify title and introduction
+Edit **h1**  and **p** elements in var dafault\_text in `circle.js` 
 
-Developer document of Google Maps Style - reference for map.js:
-https://developers.google.com/maps/documentation/javascript/styling
+## To modify plotting data
+1. Edit `xxArray.js` to edit data
+```javascript
 
-Developer document of custom Marker - reference for circle.js:
-https://developers.google.com/maps/documentation/javascript/examples/marker-symbol-custom
+var your_category_name = {};
+your_category_name['Name_of_place'] = {
+        latlng: [lat, lng],
+        url: 'url_that_provide_information_of_the_place'
+};
 
-W3school of JSON - reference for Array.js
-https://www.w3schools.com/js/js_json_intro.asp
+```
+
+2. Allow `index.html` to load your `xxArray.js` as following
+```html
+
+<script type="text/javascript" src="js/xxArray.js"></script>
+
+``` 
+
+3. Pass the information of data to drawArray() function in `map.js` 
+```javascript
+
+drawArray(your_category_name,'#color', 'your_class_name');
+
+```
+- your_category_name: it should match to the one you defined in step 1.
+- #color: this color will be used to plot circle in the map.
+- your_class_name: you can defined the class for css to edit information texts in `style.css`
+
+## To edit map style
+Edit map options in `map.js`
+Documentation of [Style Reference](https://developers.google.com/maps/documentation/javascript/style-reference)
+
+## To edit custom Marker
+Edit **circle** in `circle.js`
+Documentation of [Custom Marker](https://developers.google.com/maps/documentation/javascript/examples/marker-symbol-custom)
+
