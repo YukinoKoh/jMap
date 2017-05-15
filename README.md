@@ -27,7 +27,7 @@ You can find this project [here](http://yukinokoh.github.io/jMap/).
 Edit *h1*  and *p* elements in *var dafault\_text* in `circle.js` 
 
 ## To edit plotting data
-1. Edit the following elements in `xxArray.js`.
+##### 1. Edit the following elements in `xxArray.js`.
 - your_category_name 
 - name_of_place
 - lat, lng
@@ -42,14 +42,14 @@ your_category_name['name_of_place'] = {
 
 ```
 
-2. Load your `xxArray.js` in `index.html`.
+##### 2. Load your `xxArray.js` in `index.html`.
 ```html
 
 <script type="text/javascript" src="js/xxArray.js"></script>
 
 ``` 
 
-3. Pass the following arguments to *drawArray* function in `map.js`. 
+##### 3. Pass the following arguments to *drawArray* function in `map.js`. 
 - your_category_name: It should match with *yuor_category_name* defined in step 1.
 - #color: Color of plotted circle in the map.
 - your_class_name: Class defined in `style.css`
@@ -64,7 +64,7 @@ Edit map options in `map.js`
 
 Documentation of [Style Reference](https://developers.google.com/maps/documentation/javascript/style-reference)
 
-## To edit custom Marker
+## To edit Marker
 Edit **circle** in `circle.js`
 
 Documentation of [Custom Marker](https://developers.google.com/maps/documentation/javascript/examples/marker-symbol-custom)
