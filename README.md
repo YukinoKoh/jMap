@@ -6,7 +6,7 @@ It is the question asked throughout this little project while exploring with [Go
 
 You can find this project [here](http://yukinokoh.github.io/jMap/).
 
-Also I had a little presentation, including this project. You can download this [presentaion for *Code Chrysalis for Women*](img/Code_Chrysalis_Women_170517.pdf).
+A little presentation I did, including this project, at [*Code Chrysalis for Women*](https://www.codechrysalis.io/) is available [here] (img/Code_Chrysalis_Women_170517.pdf).
 
 ## Structure
 - `index.html`: html that shows the map on browser 
