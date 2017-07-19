@@ -7,8 +7,8 @@
 
 // default text that appear bottom of the page
 var default_text = '<div class="neutral">' +
-	'<h1>Little nice stories I heard ..</h1>' +
-	'<p>I like going to talks and listen wonderful stories. </p></div>';
+	'<h1>Welcome to Tokyo ..</h1>' +
+	'<p>Hope you enjoy this town:) </p></div>';
 
 // draw circles
 function drawArray(array_name, color, class_name){
