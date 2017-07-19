@@ -67,9 +67,9 @@ function initMap() {
 	// create map
 	map = new google.maps.Map(document.getElementById("mapArea"), mapOptions);	
     	// drawing circles in the map
-    	//drawArray(gallery,'#fcc865', 'gallery');
-    	//drawArray(food,'#fe6baa', 'food');
-    	// drawArray(books,'#48f0ce', 'books');
-    	drawArray(reading,'#48f0ce', 'reading');
+    	drawArray(gallery,'#fcc865', 'gallery');
+    	drawArray(food,'#fe6baa', 'food');
+    	drawArray(books,'#48f0ce', 'books');
+    	//drawArray(reading,'#48f0ce', 'reading');
 }
 google.maps.event.addDomListener(window, 'load', initMap);
