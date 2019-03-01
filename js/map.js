@@ -58,7 +58,7 @@ var map_style = [
 ];
 var mapOptions = {
 		center:daikanyama,
-		zoom:2,   
+		zoom:14,   
 	    	mapTypeId: google.maps.MapTypeId.ROADMAP,
 		styles: map_style
 };

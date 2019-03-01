@@ -33,39 +33,17 @@ function drawArray(array_name, color, class_name){
        var elementCircles = new google.maps.Marker(options);
        var mapsUrl = 'https://www.google.co.jp/maps/dir/Current+Location/' + element + '/@' + latlng.toString() + ',14z';
        var text = '<div><h4 class="' + class_name + '">' + class_name + '</h4><h2>' + element + '</h2><br/>URL: <a href = "' + array_name[element].url + '">' + array_name[element].url +'</a><br/>How to get there:  <a href="' + mapsUrl + '" target="_blank">Recommended route</a></div>';
-       /*  These lines for infobubble. To know more about infobubble, visit
-	   https://github.com/googlemaps/js-info-bubble
-	var bubbleContent = text;
-	var infoBubbleElement = new InfoBubble({
-      		map: map,
-      		content: bubbleContent,
-      		shadowStyle: 1,
-      		backgroundColor: color,
-      		maxWidth:300,
-      		backgroundClassName: 'bubbleGallery',
-      		borderRadius: 5,
-      		borderWidth: 0,
-      		arrowStyle: 0,
-      		arrowSize: 10,
-      		arrowPosition: 50,
-      		disableAutoPan: true,
-		closeSrc:'img/close.png'
-    	});
-	*/
-
        // add event listener
        google.maps.event.addListener(elementCircles, 'click', function() {
 	   $("#textArea").removeClass().addClass(class_name);
 	   $("#textCont").removeClass().addClass(class_name);
 	   document.getElementById("textCont").innerHTML = text;
-           /*infoBubbleElement.setPosition(this.position);
-           infoBubbleElement.open(map,this.elementCircles);
-	   */
        });
 
         google.maps.event.addListener(map, 'click', function () { 
            $("#textArea").removeClass().addClass('neutral');
            $("#textCont").removeClass().addClass('neutral');
+	   document.getElementById("textCont").innerHTML = default_text;
 	});
   }());
 }}
