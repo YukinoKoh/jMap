@@ -61,7 +61,7 @@ var mapOptions = {
 		zoom:14,   
 	    	mapTypeId: google.maps.MapTypeId.ROADMAP,
 		styles: map_style,
-                // disableDefaultUI: true
+                disableDefaultUI: true
 };
 var map;
 function initMap() {

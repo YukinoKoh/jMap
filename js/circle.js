@@ -50,6 +50,7 @@ function drawArray(array_name, color, class_name){
                marker.setIcon(circle);
            }
            elementCircles.setIcon(circle_clicked); 
+	   document.getElementById("textCont").innerHTML = '';
 	   document.getElementById("textCont").innerHTML = text;
            marker = elementCircles;
        });
