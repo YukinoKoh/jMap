@@ -47,10 +47,10 @@ body, html {
     color:#848b98;
 }
 .gallery h4{
-	background-color:#fcc865;
+	background-color:rgb(254, 107, 170);
 }
 .gallery a{
-	color:#fcc865;
+	color:rgb(254, 107, 170);
 }
 .books h4{
 	background-color:#48f0ce;
@@ -59,10 +59,10 @@ body, html {
 	color:#48f0ce;
 }
 .food h4{
-	background-color:rgb(254, 107, 170);
+	background-color:#fcc865;
 }
 .food a{
-	color:rgb(254, 107, 170);
+	color:#fcc865;
 }
 
 #mapArea {

@@ -60,16 +60,17 @@ var mapOptions = {
 		center:daikanyama,
 		zoom:14,   
 	    	mapTypeId: google.maps.MapTypeId.ROADMAP,
-		styles: map_style
+		styles: map_style,
+                // disableDefaultUI: true
 };
 var map;
 function initMap() {
 	// create map
 	map = new google.maps.Map(document.getElementById("mapArea"), mapOptions);	
     	// drawing circles in the map
-    	drawArray(gallery,'#fcc865', 'gallery');
-    	drawArray(food,'#fe6baa', 'food');
-    	drawArray(books,'#48f0ce', 'books');
+    	// drawArray(gallery,'#fe6baa'#fcc865', 'gallery');
+    	drawArray(food,'#fcc865', 'food');
+    	// drawArray(books,'#48f0ce', 'books');
     	//drawArray(reading,'#48f0ce', 'reading');
 }
 google.maps.event.addDomListener(window, 'load', initMap);
